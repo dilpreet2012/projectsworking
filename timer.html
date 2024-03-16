@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            height:100vh;
+            background-color: gray;
+        }
+    .container{
+       
+        display:flex;
+        flex-direction: column;
+        gap:20px;
+    }
+    .clock{
+        background-color: orange;
+        height:50px;
+        width:150px;
+        font-size: 23px;
+        font-weight: bolder;
+
+    }
+    .first{
+        font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="first">Your local time</div>
+        <div class="clock"></div>
+    </div>
+    <script>
+        let s=document.querySelector(".clock");
+        setInterval(()=>{
+            let d=new Date();
+            s.innerText=d.toLocaleTimeString();
+        },1000)
+    </script>
+</body>
+</html>

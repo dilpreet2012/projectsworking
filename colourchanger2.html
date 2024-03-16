@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Start should change the background colour every second</h2>
+    <button class="start">Start</button>
+    <button class="stop">Stop</button>
+</body>
+<script>
+    const start=document.querySelector(".start");
+    const stop=document.querySelector(".stop");
+    const ranfun=()=>{
+       const fix="0123456789ABCDEF";
+       let hex="#";
+       for(let i=0;i<6;i++)
+       {
+        hex+=fix[parseInt(Math.random()*16)];
+       }
+       return hex;
+    }
+    let r;
+    start.addEventListener("click",()=>
+    r=setInterval(()=>{
+            document.body.style.backgroundColor=ranfun();
+        },500));
+    stop.addEventListener("click",()=>{
+        clearInterval(r);
+    })
+</script>
+</html>

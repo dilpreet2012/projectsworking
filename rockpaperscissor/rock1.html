@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1{
+            height:15vh;
+            background-color:navy;
+            color:white;
+            text-align: center;
+            line-height: 15vh;
+        }
+        .container{
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* height:50vh; */
+            gap:10vmin;
+            margin-top: 3vh;
+        }
+        .box{
+          
+            height:28vh;
+            width:28vh;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        img{
+            height:26vh;
+            width:26vh;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .box:hover{
+            background-color: black;
+            cursor: pointer;
+        }
+        .score-board{
+    display:flex;justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+    gap:5rem;
+}
+#user-score,#comp-score{
+    font-size: 4rem;
+}
+.message-container{
+    margin-top: 5rem;
+}
+#msg{
+   
+    background-color: black;
+    color:white;
+    font-size: 1.5rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 1rem;
+   
+   
+}
+    </style>
+</head>
+<body>
+    <h1>Rock Paper Scissor</h1>
+    <div class="container">
+        <div class="box" id="rock"><img src="rock.png"></div>
+        <div class="box" id="paper"><img src="paper.png" alt="no img"></div>
+        <div class="box" id="scissor"><img src="scissors.png" alt="no img"></div>
+    </div>
+    <div class="score-board">
+        <div class="score">
+            <p id="user-score">0</p>
+            <p >You</p>
+        </div>
+        <div class="score">
+            <p id="comp-score">0</p>
+            <p>Comp</p>
+        </div>
+    </div>
+    <div class="message-container">
+            <p id="msg">Play your move</p>
+            </div>
+
+    </div>
+    <script src="rock.js"></script>
+</body>
+</html>
